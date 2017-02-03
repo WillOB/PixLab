@@ -41,7 +41,48 @@ public class IntArrayWorker {
 		}
 		return total;
 	}
-
+	
+	/**
+	 * Method to return the count of the number of times a passed integer value is found in the matrix
+	 */
+	public int getCount(int num) {
+		int count = 0;
+		for (int[] rowArray : matrix) {
+			for (int item : rowArray) {
+				if(item == num){
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+	
+	/**
+	 * Method to return the largest value in the matrix
+	 */
+	public int getLargest(){
+		int largest = 0;
+		for (int[] rowArray : matrix) {
+			for (int item : rowArray) {
+				if(item > largest){
+					largest = item;
+				}
+			}
+		}
+		return largest;
+	}
+	
+	/**
+	 * Method to return the total of all integers in a specified column
+	 */
+	public int getColTotal(int col){
+		int total = 0;
+		for (int row = 0; row < matrix.length; row++) {
+			total = total + matrix[row][col];
+		}
+		return total;
+	}
+	
 	/**
 	 * Method to fill with an increasing count
 	 */
