@@ -28,6 +28,24 @@ public class IntArrayWorker {
 	}
 
 	/**
+	 * Count how many times an integer if found in the matrix
+	 * 
+	 * @return the count
+	 */
+	public int getCount(int n){
+		int count = 0;
+		
+		for (int[] row: matrix) {
+			for (int i : row){
+				if(i == n){
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+	
+	/**
 	 * Method to return the total using a nested for-each loop
 	 * 
 	 * @return the total of the values in the array
