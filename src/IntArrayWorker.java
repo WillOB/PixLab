@@ -43,7 +43,10 @@ public class IntArrayWorker {
 	}
 	
 	/**
-	 * Method to return the count of the number of times a passed integer value is found in the matrix
+	 * Method to return the count of the number of times a passed integer value is
+	 * found in the matrix using a for-each loop
+	 * 
+	 * @return number of times int appears in matrix
 	 */
 	public int getCount(int num) {
 		int count = 0;
@@ -58,7 +61,9 @@ public class IntArrayWorker {
 	}
 	
 	/**
-	 * Method to return the largest value in the matrix
+	 * Method to return the largest value in the matrix using for-each loop
+	 * 
+	 * @return largest int in in matrix
 	 */
 	public int getLargest(){
 		int largest = 0;
@@ -74,6 +79,8 @@ public class IntArrayWorker {
 	
 	/**
 	 * Method to return the total of all integers in a specified column
+	 * 
+	 * @return total of integers in a column
 	 */
 	public int getColTotal(int col){
 		int total = 0;
