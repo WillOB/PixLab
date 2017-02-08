@@ -33,6 +33,14 @@ public class PictureTester
 	  island.explore();
   }
   
+  /** Method to test grayscale */
+  public static void testGrayscale() {
+	  Picture arch = new Picture("arch.jpg");
+	  arch.explore();
+	  arch.grayscale();
+	  arch.explore();
+  }
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -78,8 +86,8 @@ public class PictureTester
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    testNegate();
-    //testGrayscale();
+    //testNegate();
+    testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
