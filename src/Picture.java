@@ -142,13 +142,12 @@ public class Picture extends SimplePicture {
 		Pixel[][] pixels = this.getPixels2D();
 		for (Pixel[] rowArray : pixels) {
 			for (Pixel pixelObj : rowArray) {
-				int red = pixelObj.getRed();
 				int green = pixelObj.getGreen();
 				int blue = pixelObj.getBlue();
 				if (blue > green){
 					pixelObj.setBlue(blue + 30);
 				} else {
-					pixelObj.setBlue(blue - 15);
+					pixelObj.setBlue(blue - 10);
 				}
 				
 			}
