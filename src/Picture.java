@@ -136,6 +136,24 @@ public class Picture extends SimplePicture {
 			}
 		}
 	}
+	
+	/**Method to make fish easier to see in water.jpg */
+	public void fixUnderwater(){
+		Pixel[][] pixels = this.getPixels2D();
+		for (Pixel[] rowArray : pixels) {
+			for (Pixel pixelObj : rowArray) {
+				int red = pixelObj.getRed();
+				int green = pixelObj.getGreen();
+				int blue = pixelObj.getBlue();
+				if (blue > green){
+					pixelObj.setBlue(blue + 30);
+				} else {
+					pixelObj.setBlue(blue - 15);
+				}
+				
+			}
+		}
+	}
 
 	/**
 	 * Method that mirrors the picture around a vertical mirror in the center of
