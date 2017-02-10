@@ -204,6 +204,21 @@ public class Picture extends SimplePicture {
 		}
 	}
 	
+	/** Method to mirror a picture from bottom to top, around horizontal axis. */
+	public void mirrorHorizontalBotToTop() {
+		Pixel[][] pixels = this.getPixels2D();
+		Pixel topPixel = null;
+		Pixel bottomPixel = null;
+		int height = pixels.length;
+		for (int column = 0; column < pixels[0].length; column++) {
+			for (int row = 0; row < height / 2; row++){
+				topPixel = pixels[row][column];
+				bottomPixel = pixels[height - 1 - row][column];
+				topPixel.setColor(bottomPixel.getColor());
+			}
+		}
+	}
+	
 	/** Mirror just part of a picture of a temple */
 	public void mirrorTemple() {
 		int mirrorPoint = 276;

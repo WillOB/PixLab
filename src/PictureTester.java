@@ -74,6 +74,14 @@ public class PictureTester
 	  moto.explore();
   }
   
+  /** Method to test mirrorBotToTop */
+  public static void testMirrorHorizontalBotToTop(){
+	  Picture pic = new Picture("temple.jpg");
+	  pic.explore();
+	  pic.mirrorHorizontalBotToTop();
+	  pic.explore();
+  }
+  
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -115,7 +123,8 @@ public class PictureTester
     //testFixUnderwater();
     //testMirrorVertical();
 	//testMirrorVerticalRightToLeft();
-	  testMirrorHorizontal();
+	//testMirrorHorizontal();
+	  testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
