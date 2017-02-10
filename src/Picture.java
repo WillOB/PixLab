@@ -219,6 +219,11 @@ public class Picture extends SimplePicture {
 		}
 	}
 	
+	/** Method to diagonally mirror a picture */
+	public void mirrorDiagonal(){
+		Pixel[][] pixels = this.getPixels2D();
+	}
+	
 	/** Mirror just part of a picture of a temple */
 	public void mirrorTemple() {
 		int mirrorPoint = 276;

@@ -82,6 +82,14 @@ public class PictureTester
 	  pic.explore();
   }
   
+  /** Method to test mirrorDiagonal */
+  public static void testMirrorDiagonal(){
+	  Picture barb = new Picture("barbaraS.jpg");
+	  barb.explore();
+	  barb.mirrorDiagonal();
+	  barb.explore();
+  }
+  
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -124,7 +132,8 @@ public class PictureTester
     //testMirrorVertical();
 	//testMirrorVerticalRightToLeft();
 	//testMirrorHorizontal();
-	  testMirrorHorizontalBotToTop();
+	//testMirrorHorizontalBotToTop();
+	  testMirrorDiagonal();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
