@@ -181,9 +181,9 @@ public class Picture extends SimplePicture {
 		Pixel rightPixel = null;
 		int width = pixels[0].length;
 		for (int row = 0; row < pixels.length; row++) {
-			for (int col = width / 2; col <= width; col++) {
-				rightPixel = pixels[row][col];
-				leftPixel = pixels[row][width - 1 - col];
+			for (int col = 0; col <= width / 2; col++) {
+				leftPixel = pixels[row][col];
+				rightPixel = pixels[row][width - 1 - col];
 				leftPixel.setColor(rightPixel.getColor());
 			}
 		}
