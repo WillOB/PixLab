@@ -256,6 +256,20 @@ public class Picture extends SimplePicture {
 		System.out.println(count);
 	}
 
+	/** Method to mirror the snowman's arms */
+	public void mirrorArms(){
+		Pixel[][] pixels = this.getPixels2D();
+		int mirrorRow = 195;
+		Pixel topPixel = null;
+		Pixel bottomPixel = null;
+		for (int row = 165; row < mirrorRow; row++){
+			for (int col = 100; col <= 200; col++){
+				topPixel = pixels[row][col];
+				bottomPixel = pixels[row + (50 - row)][col];
+			}
+		}
+	}
+	
 	/**
 	 * copy from the passed fromPic to the specified startRow and startCol in
 	 * the current picture
