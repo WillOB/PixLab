@@ -1,10 +1,4 @@
-#Activity 5
+#Activity 7
 ##Questions
-1. getPixels2D is not there
-2. getPixels2D appears in SimplePicture.java
-3. No because there is no DigitalPicture() method in DigitalPicture.java
-4. Yes because SimplePicture implements DigitalPicture.
-5. No because there is no Picture() method in DigitalPicture.java.
-6. No becuase there is no Picture() method in SimplePicture.java.
-7. Yes because there is a SimplePicture() method in SimplePicture.java and Picture.java
-    extends from SimplePicture.
+1. 90 times: 10 * 9 = 90
+2. 112 times: 7 * 16 = 112
