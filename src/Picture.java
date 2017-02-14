@@ -275,6 +275,23 @@ public class Picture extends SimplePicture {
 		}
 	}
 	
+	/** Method to mirror the seagull */
+	public void mirrorGull(){
+		Pixel[][] pixels = this.getPixels2D();
+		int mirrorCol = 350;
+		Pixel leftPixel = null;
+		Pixel rightPixel = null;
+		for (int row = 233; row < 321; row++){
+			int count = 0;
+			for (int col = 235; col < mirrorCol; col++){
+				leftPixel = pixels[row][col];
+				rightPixel = pixels[row][465 - count];
+				rightPixel.setColor(leftPixel.getColor());
+				count++;
+			}
+		}
+	}
+	
 	/**
 	 * copy from the passed fromPic to the specified startRow and startCol in
 	 * the current picture
