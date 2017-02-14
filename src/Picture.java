@@ -262,11 +262,16 @@ public class Picture extends SimplePicture {
 		int mirrorRow = 195;
 		Pixel topPixel = null;
 		Pixel bottomPixel = null;
+		int count = 0;
 		for (int row = 165; row < mirrorRow; row++){
-			for (int col = 100; col <= 200; col++){
+			for (int col = 100; col < 300; col++){
+				if (col < 170 || col > 238){
 				topPixel = pixels[row][col];
-				bottomPixel = pixels[row + (50 - row)][col];
+				bottomPixel = pixels[225 - count][col];
+				bottomPixel.setColor(topPixel.getColor());
+				}
 			}
+			count++;
 		}
 	}
 	
