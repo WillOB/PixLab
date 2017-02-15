@@ -372,9 +372,28 @@ public class Picture extends SimplePicture {
 		this.copy(flower1, 400, 0);
 		this.copy(flower2, 500, 0);
 		this.mirrorVertical();
-		this.write("collage.jpg");
+		//this.write("collage.jpg");
 	}
 
+	
+	/**
+	 * Method to create a collage, with one picture mirrored, one made blue, and one red
+	 */
+	public void myCollage(){
+		Picture koala = new Picture("koala.jpg");
+		Picture moon = new Picture("moon-surface.jpg");
+		Picture door = new Picture("thruDoor.jpg");
+		Picture koalaMirrored = new Picture(koala);
+		koalaMirrored.mirrorVertical();
+		koalaMirrored.keepOnlyBlue();
+		koala.negate();
+		this.copy(koala, 0, 0);
+		this.copy(koalaMirrored, 0, 320);
+		moon.zeroBlue();
+		this.copy(moon, 240, 0);
+		this.copy(door, 240, 320);
+	}
+	
 	/**
 	 * Method to show large changes in color
 	 * 
