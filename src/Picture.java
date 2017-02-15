@@ -319,6 +319,46 @@ public class Picture extends SimplePicture {
 		}
 	}
 
+	/**
+	 * copy from the passed fromPic to the specified startRow and startCol in
+	 * the current picture
+	 * 
+	 * @param fromPic
+	 *            the picture to copy from
+	 * @param startRow
+	 *            the start row to copy to
+	 * @param startCol
+	 *            the start col to copy to
+	 * @param startRowFrom
+	 * 				the start row to copy from
+	 * @param endRowFrom
+	 * 				the end row to copy from
+	 * @param startColFrom
+	 * 				the start col to copy from
+	 * @param endColFrom
+	 * 				the last col to copy from
+	 */
+	public void copyWithParameters(Picture fromPic, int startRow, int startCol,
+			int startRowFrom, int endRowFrom, int startColFrom, int endColFrom) {
+		Pixel fromPixel = null;
+		Pixel toPixel = null;
+		Pixel[][] toPixels = this.getPixels2D();
+		Pixel[][] fromPixels = fromPic.getPixels2D();
+		for (int fromRow = 0, toRow = startRow; fromRow < fromPixels.length
+				&& toRow < toPixels.length; fromRow++, toRow++) {
+			if(fromRow >= startRowFrom && fromRow <= endRowFrom) {
+				for (int fromCol = 0, toCol = startCol; fromCol < fromPixels[0].length
+						&& toCol < toPixels[0].length; fromCol++, toCol++) {
+					if(fromCol >= startColFrom && fromCol <= endColFrom){
+					fromPixel = fromPixels[fromRow][fromCol];
+					toPixel = toPixels[toRow][toCol];
+					toPixel.setColor(fromPixel.getColor());
+					}
+				}
+			}
+		}
+	}
+	
 	/** Method to create a collage of several pictures */
 	public void createCollage() {
 		Picture flower1 = new Picture("flower1.jpg");

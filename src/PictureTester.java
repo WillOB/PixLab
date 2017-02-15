@@ -115,6 +115,16 @@ public class PictureTester
 	  seagull.explore();
   }
   
+  /** Method to test copyWithParameters */
+  public static void testCopyWithParameters(){
+	  Picture flower = new Picture("flower1.jpg");
+	  Picture flower2 = new Picture("flower2.jpg");
+	  flower.explore();
+	  flower2.explore();
+	  flower2.copyWithParameters(flower, 0, 0, 0, 100, 50, 99);
+	  flower2.explore();
+  }
+  
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -152,10 +162,11 @@ public class PictureTester
 	//testMirrorDiagonal();
     //testMirrorTemple();
     //testMirrorArms();
-    testMirrorGull();
+    //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
+	testCopyWithParameters();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
