@@ -442,14 +442,7 @@ public class Picture extends SimplePicture {
 		Pixel topPixel = null;
 		Pixel bottomPixel = null;
 		Pixel[][] pixels = this.getPixels2D();
-		for (Pixel[] rowArray : pixels) {
-			for (Pixel pixelObj : rowArray) {
-				int red = pixelObj.getRed();
-				int green = pixelObj.getGreen();
-				int blue = pixelObj.getBlue();
-				pixelObj.setRed((red + blue + green) / 3);
-			}
-		}
+		this.grayscale();
 		for (int row = 0; row < pixels.length; row++) {
 			for (int col = 0; col < pixels[0].length - 1; col++) {
 				leftPixel = pixels[row][col];
